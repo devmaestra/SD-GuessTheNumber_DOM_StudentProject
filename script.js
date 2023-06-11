@@ -48,8 +48,10 @@
 
     let min = 1;
     let max = 100;
+    let guessNumber = 0;
 
 function randomNumber(userGuess, computersNumber) {
+    guessNumber += 1;
     console.log(computersNumber);
     if (userGuess > 100 || userGuess < 1) {
         console.log(userGuess);
@@ -62,7 +64,7 @@ function randomNumber(userGuess, computersNumber) {
         return `Lower, ${userGuess} is too high.`;
     } else if (userGuess == computersNumber) {
         console.log(userGuess);
-        return `Correct! My number is ${userGuess}!`;
+        return `Correct! My number is ${userGuess}! You got it in ${guessNumber} guesses!`;
     }
 };
 
@@ -82,15 +84,18 @@ function newGuess(min, max) {
 }
 
 function compGuess(reply) {
+    guessNumber += 1;
     if (reply == 'correct') {
         console.log(reply);
-        return `Yay, I got it!`;
+        return `Yay, I got it in ${guessNumber} guesses!` 
     } else if (reply == 'lower') {
         max = guessed - 1
         // newGuess ();
         return(`How about ${newGuess (min, max)}?`);
     } else if (reply == 'higher') {
         min = guessed + 1
-        return (`How about ${newGuess (min, max)}?`);
+        return (`How about ${newGuess (min, max)}?`);        
     }
 } 
+
+// Stretch Goals: # of guesses- successful
