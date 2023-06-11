@@ -47,28 +47,30 @@
 
 // }
 
-const randomNumber = Math.floor(Math.random()* 100) + 1;
+// const randomNumber = Math.floor(Math.random()* 100) + 1;
 // console.log(randomNumber);
 
-    let userGuess = 7;
+    // let guessedNumber = 0;
     let min = 1;
     let max = 100;
-    // let usedGuesses = [];
 
-function checkGuess() {
-    let userGuess = guessedNumber
-    if (userGuess === randomNumber) {
-        return (`Correct! My number was ${randomNumber}!`);
-    } else if (userGuess > randomNumber) {
-        return (`Lower, ${userGuess} is too high.`);
-    } else if (userGuess < randomNumber) {
-        return (`Higher, ${userGuess} is too low.`);
+function randomNumber(userGuess, computersNumber) {
+    // let userGuess = guessedNumber
+    console.log(computersNumber);
+    if (userGuess < computersNumber) {
+        return `Higher, ${userGuess} is too low.`;
+    } else if (userGuess > computersNumber) {
+        return `Lower, ${userGuess} is too high.`;
+    } else if (userGuess === computersNumber) {
+        return `Correct! My number was ${userGuess}!`;
     }
 };
 
-checkGuess();
+
+// function compGuess(reply) {
 
 
+// }
 
 
 
