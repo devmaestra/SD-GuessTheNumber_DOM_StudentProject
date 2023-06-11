@@ -5,60 +5,72 @@
 
 // function randomNumber(userGuess, computersNumber) {
 
-//     // YOUR CODE BELOW
+    // YOUR CODE BELOW
 
 
 
 
-//     // YOUR CODE ABOVE
+    // YOUR CODE ABOVE
 // };
 
 
 
 // //* Have the Computer Guess your Number ---------------------------------------------
-// /* 
-//     Build out the functionality for the computer to guess and evaluate your random number.
+/* 
+    Build out the functionality for the computer to guess and evaluate your random number.
 
-//     - There are two static functions framed. DO NOT alter the name or parameters of these functions:
-//         - startCompGuess(num)
-//         - compGuess(reply)
+    - There are two static functions framed. DO NOT alter the name or parameters of these functions:
+        - startCompGuess(num)
+        - compGuess(reply)
 
-//     *hint:
-//         - don't forget that variables are a way for us to store information and update later.
-//         - What is the "current number"? The lowest number? Highest?
+    *hint:
+        - don't forget that variables are a way for us to store information and update later.
+        - What is the "current number"? The lowest number? Highest?
 
-//     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
-// */
+    You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
+*/
 
 // function startCompGuess(num) {
-//     // This should return a string that denotes the first guessed number
+    // This should return a string that denotes the first guessed number
 
-//     // YOUR CODE ...
+    // YOUR CODE ...
 
 
 // }
 
 // function compGuess(reply) {
-//     /* 
-//     *   The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
+    /* 
+    *   The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
 
-//     This should return a string indicating the computers response.
-//     */
+    This should return a string indicating the computers response.
+    */
 
 // }
 
-let randomNumber = Math.floor(Math.random()* 101)
-console.log(randomNumber);
+const randomNumber = Math.floor(Math.random()* 100) + 1;
+// console.log(randomNumber);
 
-function randomNumber(userGuess, computersNumber) {
-}
-    let userGuess = 0
-    let min = 1
-    let max = 100
+    let userGuess = 7;
+    let min = 1;
+    let max = 100;
+    // let usedGuesses = [];
 
-// // let currentNumber = randomNumber
-// // functionName();
+function checkGuess() {
+    let userGuess = guessedNumber
+    if (userGuess === randomNumber) {
+        return (`Correct! My number was ${randomNumber}!`);
+    } else if (userGuess > randomNumber) {
+        return (`Lower, ${userGuess} is too high.`);
+    } else if (userGuess < randomNumber) {
+        return (`Higher, ${userGuess} is too low.`);
+    }
+};
 
-//     do {
+checkGuess();
 
-//     }
+
+
+
+
+// let currentNumber = randomNumber
+// functionName()
