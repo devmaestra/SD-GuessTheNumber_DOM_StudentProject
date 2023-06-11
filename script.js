@@ -57,12 +57,18 @@
 function randomNumber(userGuess, computersNumber) {
     // let userGuess = guessedNumber
     console.log(computersNumber);
-    if (userGuess < computersNumber) {
+    if (userGuess > 100 || userGuess < 1) {
+        console.log(userGuess);
+        return `Whoa, buddy, ${userGuess} is outta bounds!`;
+    } else if (userGuess < computersNumber) {
+        console.log(userGuess);
         return `Higher, ${userGuess} is too low.`;
     } else if (userGuess > computersNumber) {
+        console.log(userGuess);
         return `Lower, ${userGuess} is too high.`;
-    } else if (userGuess === computersNumber) {
-        return `Correct! My number was ${userGuess}!`;
+    } else if (userGuess == computersNumber) {
+        console.log(userGuess);
+        return `Correct! My number is ${userGuess}!`;
     }
 };
 
