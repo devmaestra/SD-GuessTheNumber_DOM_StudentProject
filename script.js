@@ -75,20 +75,41 @@ function randomNumber(userGuess, computersNumber) {
 /*PART 2: HAVE THE COMPUTER GUESS MY NUMBER */
 
 function startCompGuess(num) {
-    console.log((`${startNum}?`)); //com gives a number, if it matched my number, it says "Correct!"  Put () to make sure it give a number, not a string
-    if (response = true) {
-        // console.log(compGuessResponse);
-        return `Yay, I got it!`;
-    } else if (response = false && response[1]) {
-        return (`${startNum}?`);
-    } else if (response = false && response[5]) {
-        return (`${startNum}?`);
-    }
+    guessed = num
+    return (`Is ${num} your number?`)
 };
+    // console.log((`${num}?`)); //com gives a number, if it matched my number, it says "Correct!"  Put () to make sure it give a number, not a string
+    // if (response = true) {
+    //     // console.log(compGuessResponse);
+    //     return `Yay, I got it!`;
+    // } else if (response = false && response[1]) {
+    //     return (`${num}?`);
+    // } else if (response = false && response[5]) {
+    //     return (`${startNum}?`);
+    // }
 
+let guessed ;
 
+function newGuess(min, max) {
+    console.log(min, max);
+    guessed = Math.floor(Math.random() * (max - min + 1) + min);
+    return guessed;
+}
+
+// console.log(guessed);
 
 function compGuess(reply) {
-
-
+    // console.log(guessed);
+    if (reply == 'correct') {
+        console.log(reply);
+        return `Yay, I got it!`;
+    } else if (reply == 'lower') {
+        max = guessed - 1
+        // newGuess ();
+        return(`How about ${newGuess (min, max)}?`);
+    } else if (reply == 'higher') {
+        min = guessed + 1
+        return (`How about ${newGuess (min, max)}?`);
+    }
 }
+// here's the numbers 
