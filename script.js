@@ -72,13 +72,22 @@ function randomNumber(userGuess, computersNumber) {
     }
 };
 
+/*PART 2: HAVE THE COMPUTER GUESS MY NUMBER */
 
-// function compGuess(reply) {
+function startCompGuess(num) {
+    console.log(`${startNum}?`); //com gives a number, if it matched my number, it says "Correct!"
+    if (response = true) {
+        // console.log(compGuessResponse);
+        reply `Yay, I got it!`;
+    } else if (response = false && response[1]) {
+        reply `${startNum}?`;
+    } else if (response = false && response[5]) {
+        reply `${startNum}?`;
+    }
+};
 
 
-// }
+function compGuess(reply) {
+    
 
-
-
-// let currentNumber = randomNumber
-// functionName()
+}
