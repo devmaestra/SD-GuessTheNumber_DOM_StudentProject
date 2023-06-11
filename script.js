@@ -45,17 +45,11 @@
     This should return a string indicating the computers response.
     */
 
-// }
 
-// const randomNumber = Math.floor(Math.random()* 100) + 1;
-// console.log(randomNumber);
-
-    // let guessedNumber = 0;
     let min = 1;
     let max = 100;
 
 function randomNumber(userGuess, computersNumber) {
-    // let userGuess = guessedNumber
     console.log(computersNumber);
     if (userGuess > 100 || userGuess < 1) {
         console.log(userGuess);
@@ -78,15 +72,6 @@ function startCompGuess(num) {
     guessed = num
     return (`Is ${num} your number?`)
 };
-    // console.log((`${num}?`)); //com gives a number, if it matched my number, it says "Correct!"  Put () to make sure it give a number, not a string
-    // if (response = true) {
-    //     // console.log(compGuessResponse);
-    //     return `Yay, I got it!`;
-    // } else if (response = false && response[1]) {
-    //     return (`${num}?`);
-    // } else if (response = false && response[5]) {
-    //     return (`${startNum}?`);
-    // }
 
 let guessed ;
 
@@ -96,10 +81,7 @@ function newGuess(min, max) {
     return guessed;
 }
 
-// console.log(guessed);
-
 function compGuess(reply) {
-    // console.log(guessed);
     if (reply == 'correct') {
         console.log(reply);
         return `Yay, I got it!`;
@@ -111,5 +93,4 @@ function compGuess(reply) {
         min = guessed + 1
         return (`How about ${newGuess (min, max)}?`);
     }
-}
-// here's the numbers 
+} 
