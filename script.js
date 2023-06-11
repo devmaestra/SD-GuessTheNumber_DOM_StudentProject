@@ -75,19 +75,20 @@ function randomNumber(userGuess, computersNumber) {
 /*PART 2: HAVE THE COMPUTER GUESS MY NUMBER */
 
 function startCompGuess(num) {
-    console.log(`${startNum}?`); //com gives a number, if it matched my number, it says "Correct!"
+    console.log((`${startNum}?`)); //com gives a number, if it matched my number, it says "Correct!"  Put () to make sure it give a number, not a string
     if (response = true) {
         // console.log(compGuessResponse);
-        reply `Yay, I got it!`;
+        return `Yay, I got it!`;
     } else if (response = false && response[1]) {
-        reply `${startNum}?`;
+        return (`${startNum}?`);
     } else if (response = false && response[5]) {
-        reply `${startNum}?`;
+        return (`${startNum}?`);
     }
 };
 
 
+
 function compGuess(reply) {
-    
+
 
 }
