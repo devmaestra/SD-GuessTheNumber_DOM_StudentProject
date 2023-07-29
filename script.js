@@ -13,7 +13,7 @@ function randomNumber(userGuess, computersNumber) {
     } else if (userGuess > computersNumber) {
         return `Lower, ${userGuess} is too high.`;
     } else if (userGuess == computersNumber) {
-        return `Correct! My number is ${userGuess}! You got it in ${guessNumber} guesses!`;
+        return `The number was ${userGuess}! You got it in ${guessNumber} guesses!`;
     }
 };
 
