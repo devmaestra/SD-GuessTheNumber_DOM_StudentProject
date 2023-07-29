@@ -1,4 +1,5 @@
-// Part 1: Guess the computer's number:
+// Part 1: User guesses the computer's number:
+
     let min = 1;
     let max = 100;
     let guessNumber = 0;
@@ -17,7 +18,7 @@ function randomNumber(userGuess, computersNumber) {
     }
 };
 
-//Part 2: Have the computer guess my number:
+//Part 2: Have the computer guess user's number:
 
 function startCompGuess(num) {
     guessed = num
@@ -34,7 +35,7 @@ function newGuess(min, max) {
 function compGuess(reply) {
     guessNumber += 1;
     if (reply == 'correct') {
-        return `Yay, I got it in ${guessNumber} guesses!` 
+        return `Hooray, I got it in ${guessNumber} guesses!` 
     } else if (reply == 'lower') {
         max = guessed - 1
         return(`How about ${newGuess (min, max)}?`);
@@ -43,5 +44,3 @@ function compGuess(reply) {
         return (`How about ${newGuess (min, max)}?`);        
     }
 } 
-
-// Stretch Goals: # of guesses- successful
